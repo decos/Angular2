@@ -1,0 +1,401 @@
+ANGULARJS
+	Es una framework Javascript, de codigo abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola pagina.
+
+1. INTRODUCCION AL CURSO DE ANGULAR 2
+	INSTALACIONES Y CONFIGURACIONES MINIMAS NECESARIAS
+		1. NODE JS
+			Es un entorno de ejecucion para Javascript construido con el motor Javascript V8 de Chrome
+			
+			node --version
+			
+			NPM (Node Package Management): Es el ecosistema de paquetes de NODE.JS, es el ecosistema más grande de librerías de codigo abierto en el mundo
+			
+			https://nodejs.org/es/
+			
+		2. Google Chrome
+			https://www.google.es/chrome/browser/desktop/index.html
+		
+		3. Typescript
+			https://www.typescriptlang.org/
+			
+			tsc -v
+			
+		4. Angular CLI
+			https://cli.angular.io/ (Get Started)
+			
+			Crear nuestras aplicaciones, crear modulos de revision, poder hacer despliegues, etc
+			
+			npm install -g @angular/cli
+			ng --version
+			
+		5. IONIC (Framework)
+			https://ionicframework.com/
+			
+			- Usa como base para crear sus aplicaciones Angular2
+			- Es un bootstrap para celulares
+			
+			npm install -g cordova ionic
+			ionic -v
+			
+		6. Atom 
+			https://atom.io/
+			
+			Atom > File > Settings > Install
+				Intalar:
+				1. Angular 2 TypeScript Snippets (angular-2-typescript-snippets)
+					
+				2. Bootstrap 4 Support (atom-bootstrap4)
+					Ayudas para el Bootstrap 4
+					
+				3. atom-typescript
+				
+				4. file-icons
+					Iconos diferentes dependiendo que archivo es
+					
+				5. font-awesome-snippetset
+					Un ejemplo donde nos enseñan como hacer un loading
+					
+				6. minimap
+				
+				7. platformio-ide-terminal
+					Facilitar componentes o a la hora de usar Angulas-CLI
+				
+				8. v-bootstrap4
+					Ayuda a crear componentes y agregar clases a la hora de estar escribiendo
+					
+				9. autocomplete-js-import
+					Puede ser que no funcione por defecto el auto completar de los imports, este plugin hace el truco.
+			
+2. INTRODUCCION A TYPESCRIPT Y ES6
+	
+	CONFIGURACION TYPESCRIPT
+	
+		- Compilar archivo .ts	(Generar archivo de javascript)
+			tsc "nombre"
+			
+		- Para que mantener al compilador observando un archivo
+			tsc "nombre" -w
+			
+		- Crear archivo configuración TS
+			tsc -init
+			
+		- Buscar todos los cambios y compilar todos los archivos .ts	
+			tsc
+		
+	VARIABLES LET Y CONST
+		
+		LET: Para que una variable funcione solo en un ambiente (scope).
+		CONST: Constantes, no se puede cambiar su valor, en el mismo scope.
+		
+	TEMPLATE LITERALES DE ES6
+		Ex:
+			- let texto = `Hola, ${ nombre } ${ apellido } (${ edad })`;
+			- let texto2:string = ` ${ getNombre() } `;
+			
+	FUNCIONES: PARAMETROS OPCIONALES, OBLIGATORIOS Y POR DEFECTO
+		Ex:
+			function activar( quien:string,			// Obligatorio
+                  objeto:string = "batiseñal",		// Por defecto
+                  momento?:string){					// Opcional
+			}
+			
+	FUNCIONES DE FLECHA
+		Ex:
+			let hulk  = {
+			  nombre: "Hulk",
+			  smash(){
+				// incorrecto
+				/*setTimeout( function(){
+				  console.log(this.nombre + " smash!!");
+				}, 1500); */
+
+				// correcto
+				setTimeout( () => console.log(this.nombre + " smash!!"), 1500 );
+			  }
+			}
+			
+	DESTRUCTURACIÓN DE OBJETOS Y ARREGLOS
+		OBJETOS, Ex:
+			- No importa el orden, siempre y cuando los nombres de las propiedades esten. 
+			- Despues de los dos puntos (:) en una destructuración es un alias.
+		
+			let { poder:string, nombre, clave } = avenger;
+			console.log(nombre, clave, string);
+			
+		ARREGLOS:
+			- Es secuencual
+		
+	PROMESAS
+		Nos da la posibilidad de ejecutar una tarea, cuando una tarea asincrona es terminada.
+		
+	INTERFACES
+	
+	INTRODUCCION A LAS CLASES DE LA POO
+
+	DEFINICION DE UNA CLASE BASICA
+	
+	CONSTRUCTORES DE UNA CLASE EN TYPESCRIPT
+		Ex:
+			class Avenger {
+				nombre:string = "Sin Nombre";
+				equipo:string = undefined;
+				nombreReal:string = undefined;
+
+				puedePelear:boolean = false;
+				peleasGanadas:number = 0;
+
+				constructor( nombre:string, equipo:string, nombreReal:string ){
+				  //console.log("Se ejecuto el constructor")
+				  this.nombre = nombre;
+				  this.equipo = equipo;
+				  this.nombreReal = nombreReal;
+				}
+
+			}
+
+			let antman:Avenger = new Avenger( "Antman", "cap", "Scott Lang" );
+			console.log(antman);
+		
+	DECORADORES EN LAS CLASES
+		¿Que es un Decorador?
+			- Es una simple función común
+			
+			
+3. APLICACIÓN: HOLA MUNDO
+	INTRODUCCIÓN A LOS COMPONENTES Y DIRECTIVAS ESTRUCTURALES
+		
+		AngularJS: "Primera versión de angular"
+		Angular 2: "En angular es tan cosa..."
+		
+		COMPONENTES:
+			- Son pequeñas clases que cumplen una tarea especifica
+			Ex: 
+				Menú de Navegación, 
+				Barra Lateral, 
+				Mostrar la información, 
+				Pie de la App
+			
+		DIRECTIVAS ESTRUCTURALES:
+			Ex:
+				ngif: Se encarga de mostrar u ocultar elementos HTML 
+					en la pagina web.
+					
+				ngfor: Se encarga de hacer repeticiones de elementos HTML
+					en la pagina web
+					
+		PLNKR (PLUNKER):
+			Es una pagina que nos permite a nosotros guardar un codigo y ejecutarlo en la web.
+			
+			Ex:
+				http://plnkr.co
+			
+	CREANDO UN ENTORNO LOCAL DE ANGULAR 
+		https://angular.io/guide/quickstart
+		
+		- Obtener la version de Angular
+			ng -v (Superior 1.1.3)
+		
+		1. Crer un proyecto en Angular
+			ng new holamundo
+		
+		2. Entrar al proyecto creado y levantar el servidor
+			"ng serve --open"  o también "ng serve -o"
+		
+			Se levantara la siguiente pagina web en el browser:
+				http://localhost:4200/
+		
+		3. Abrir ATOM y jalar el proyecto "hola mundo" al editor de texto.
+		
+		4. Eliminar la información que esta en el siguiente directorio
+			y agregar las etiquetas <h1> y <3>
+			src\app\app.component.html
+			
+			¿Donde declara el nombre y apellido?
+			src\app\app.component.ts
+			
+		5. En la versión final del servidor no va todo lo que se observa 
+			actualmente en el proyecto creado por el CLI.
+			
+	ESTRUCTURA DEL PROYECTO
+		PROYECTO: 				"1. Hola Mundo"
+		e2e 					Pruebas Unitarias
+		.angular-cli.json		Archivo de configuración propio del CLI
+		.editorconfig			Configuraciones del editor
+		.gitignore				Archivos que queremos ignorar GIT
+		karma.conf.js			Es utilizado para realizar pruebas unitarias
+		package.json			Archivo muy importante para el proyecto, en caso
+								de desastres, se perdieran los modulos de node, 
+								serviria para reconstruir el proyecto.
+								
+								Comando -> --save-dev: DESARROLLO
+								Comando -> --save: PRO 
+								
+		protractor.conf.js		Archivo de configuracion para realizar pruebas
+		README.md				Markdown Documentación Archivo
+		tsconfig.json			Archivo de configuración de TypeScript
+		tslint.json				Archivo que nos ayuda aque los errores se		
+								vean bien.			
+			
+		SRC						Carpeta que contiene todo el trabajo que se vaya
+								haciendo en el día a día
+			
+			app:				Carpeta que tiene la primera pantalla que se abre
+								cuando lanzamos nuestra applicacion de Angular
+	
+								- src\app\app.component.ts: Primer componente que se carga en una aplicacion de Angular (Por defecto), codigo que responde al "app.component.html"
+								
+								- src\app\app.module.ts: (Libreria gigantesca)
+									declarations: Componentes 
+									imports: configuraciones globales
+									providers (servicios): Archivo que puede ser compartido por toda la aplicacion
+									bootstrap: pagina que quieres lanzar al principio
+								
+								
+								- src\app\app.component.css: Sirve para estilizar el 
+									"app.component.html"
+								
+								- src\app\app.component.html: Codigo HTML que el componente "app.component.ts"
+								
+								- src\app\app.component.spec.ts: Archivos ".spec" son para realizar pruebas sobre el componente
+			
+			
+			assets:				Recursos estaticos: imagenes, archivos de musica, videos
+				
+			environments:		Desarrollo y Produccion
+			
+			favicon.icon:		Icono de la aplicacion
+			index.html:			Index de la aplicacion 
+			main.ts:			Archivo que si usa APP.MODULE; 
+			polyfills.ts		Ayudan a aumentar la compatibilidad en nuestras aplicaciones
+			styles.css:			Archivo de estilos globales 
+			test.ts:			Sirve para realizar pruebas
+			tsconfig.app.json:	Archivo dedicado a lo que es el app (NO SE TOCARA)
+			tsconfig.spec.json: Para hacer pruebas (NO SE TOCARA)
+			typings.d.ts:		Definir variables globales a lo larga de la aplicacion
+			
+		NODE_MODULES: Contiene todas las librerias que nosotros vayamos necesitamos en nuestro proyecto
+			
+		
+	UTILIZANDO BOOTSTRAP 4		
+		https://v4-alpha.getbootstrap.com/
+		
+		1. Copiar el codigo de instalacion que esta en la pagina de bootstrap aquí:
+			src\index.html
+			
+		CREAR NAVBAR
+			-FORMA DIFICIL
+			
+			1. Crear el siguiente directorio y archivo:
+				src\app\components\header.component.ts
+				
+			2. Agregar lo siguiente en el archivo src\app\app.module.ts
+				import { HeaderComponent } from './components/header.component';
+				
+			3. Agregar lo siguiente en el archivo src\app\app.module.ts	
+				HeaderComponent en DECLARATIONS
+	
+			4. Agregar la nueva etiqueta creada (HEADER COMPONENT) aquí
+				src\app\app.component.html
+	
+	
+	TemplateURL: SEPARANDO EL TEMPLATE DEL COMPONENTE
+		Realizar lo siguiente:
+		
+		1. Crear el archivo src\app\components\header.component.html
+		2. Modificar la línea "template" por "templateUrl" en el sgte archivo:
+			src\app\components\header.component.ts
+			
+		3. OPCIONAL: Modificar en el codigo HTML del componente la sgte linea:
+			<nav class="navbar navbar-toggleable-md navbar-light bg-faded"> POR
+			<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+			
+		4. Agregar un nuevo componente llamado "BODY COMPONENT"
+		
+	
+	CREANDO EL FOOTER.COMPONENT		
+		Crear con el ANGULAR-CLI componentes de forma automatica
+		
+			1.Por consola ingresar (Angular-Generar-Componente-"Nombre Componente")
+				ng g c footer
+				
+					create src\app\footer\footer.component.css
+					create src\app\footer\footer.component.html
+					create src\app\footer\footer.component.spec.ts
+					create src\app\footer\footer.component.ts
+					update src\app\app.module.ts
+				
+	
+	ESTRUCTURA DEL BODY COMPONENT
+		Modificar las sgtes clases:
+			- src\app\components\body.component.html
+			- src\app\app.component.html
+			- src\styles.css
+				
+	DIRECTIVAS ESTRUCTURALES
+		Son instrucciones que agrega, elimina o reemplazan elementos HTML en el template.
+	
+		1. ngIf
+			
+			- Agregar un objeto en el archivo:
+				src\app\components\body.component.ts
+				
+			- Si yo quiero mostrar o ocultar la tarjeta, ¿como podria hacer eso?
+			
+			- Modificar el sgte archivo:
+				src\app\components\body.component.html
+			
+			- btn-block = Boton agarre todo el ancho
+			
+		2. ngfor
+				
+			- Es muy utilizando cuando tenemos elementos o arreglos, en los cuales nosotros queremos repetir cualquier cosa HTML o queremos tener listar ordenadas.
+
+			- Agregar el arreglo "personajes" en:
+				src\app\components\body.component.ts
+				
+			- Agregar la directiva "*ngFor" y toda la logica en:	
+				src\app\components\body.component.html
+				
+
+4. SINGLE PAGE APPLICATION (SPA)
+	A continuación vamos a aprender sobre los siguientes temas:
+
+		1. Crearemos una aplicación de una sola página (Single Page Application)
+		2. Creación de proyectos de Angular usando el CLI (Command Line Interface)
+		3. Instalando bootstrap o librerías de terceros usando el Angular-CLI
+		4. Creación de rutas de nuestra aplicación
+		5. Uso de RouterLink y RouterLinkActive para movernos de página y colocar clases a los elementos activos.
+		6. Uso del modulo Router, que nos permite movernos de página mediante código.
+		7. Obtención de parámetros vía URL.
+		8. Configuración de nuestro primer servicio en Angular para el manejo de la data.
+		9. Breve introducción a los Pipes 
+		10. Uso del buscador del navbar para realizar una consulta a nuestro arreglo de héroes.
+			
+	ACTUALIZACIONES DE LA SECCIÓN
+		ERROR:
+			Uncaught TypeError: Cannot read property 'apply' of undefined 
+		SOLUCIÓN:
+			npm install zone.js@0.8.5 --save
+			
+	INICIAR EL PROYECTO CON ANGULAR-CLI
+		- Ingresar por consola:
+			ng new SPA
+		
+		- Modificar "SPA" y nombrarlo "2. SPA"
+			
+		- Ingresar por consola:
+			ng serve
+			
+		ERROR: 
+			The "@angular/compiler-cli" package was not properly installed. Error: Error: Cannot find module '@angular/compiler-cli'
+		
+		SOLUCIÓN:
+			npm install
+			ng serve
+			
+	CREANDO LA ESTRUCTURA DE NUESTRO PROYECTO
+		
+			
+			
+			
+			
