@@ -394,8 +394,45 @@ ANGULARJS
 			ng serve
 			
 	CREANDO LA ESTRUCTURA DE NUESTRO PROYECTO
+		1. Creo la carpeta "components" dentro de la carpeta "app"
+		2. Creo la carpeta "shared" dentro de la carpeta "components"
+		3. Ejecuto por Angular-CLI:
+			ng g c components/shared/navbar
+			ng g c components/home
+			
+	INSTALANDO BOOTSTRAP CUANDO USAMOS EL ANGULAR-CLI
+		".angular-cli.json" = Cuando generemos una version compilada de nuestra aplicacion va mandar a produccion todo lo que este aca.
+	
+		La primera manera seria, copiar "Bootstrap CDN" en el siguiente archivo:
+			src\index.html
+			https://v4-alpha.getbootstrap.com/
 		
+		La segunda manera seria la siguiente
+		
+		1. Ejecutar por consola lo siguiente:
+			BOOTSTRAP
+				npm install bootstrap@4.0.0-alpha.6 --save
+				https://v4-alpha.getbootstrap.com/getting-started/download/#package-managers
+				
+			JQUERY
+				npm install jquery --save
+			
+			TETHER (Posicionar elementos en la pagina)
+				http://tether.io/
+				npm install tether --save
+			
+		2. Todos las dependencias deben agregarse a ".angular-cli.json" 
+		
+		3. Referenciar las dependencias instaladass al proyecto en el archivo
+			.angular-cli.json
+			
+			- styles
+			- scripts
+			
+	
 			
 			
+			
+		
 			
 			
