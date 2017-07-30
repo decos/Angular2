@@ -429,10 +429,26 @@ ANGULARJS
 			- styles
 			- scripts
 			
-	
+	CONFIGURANDO EL NAVBAR
+		1. Crear la siguiente carpeta
+			C:\xampp\htdocs\Angular\2. SPA\src\assets\img
 			
+		2. Copiar el "favicon.ico" de la carpeta de "recursos" en:
+			C:\xampp\htdocs\Angular\2. SPA\src
 			
+		3. Copiar el codigo del NAVBAR Bootstrap4 en el siguiente archivo:
+			src\app\components\shared\navbar\navbar.component.html
+			
+		4. Agregar el componente "appnavbar" en el siguiente archivo:
+			src\app\app.component.html
+			
+		5. Agregar el elemento "jumbotron" al componente "home"
+			src\app\components\home\home.component.html
+			
+		6. Generar dos componentes más:
+			ng g c components/about
+			ng g c components/heroes -is (Sin el archivo CSS)
 			
 		
-			
+	
 			
