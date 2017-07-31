@@ -450,5 +450,43 @@ ANGULARJS
 			ng g c components/heroes -is (Sin el archivo CSS)
 			
 		
-	
+	RUTAS EN ANGULAR
+		1. En la carpeta APP , crear un nuevo archivo:
+			src\app\app.routes.ts
+			
+		2. Ejecutar en el archivo creado la siguiente linea: (Exclusivo para ATOM)
+			ng2-routes
+		
+		3. Cambiar las constantes de Mayusculas
+		
+		4. Como decirle a ANGULAR dispones de este sistema de rutas 
+			- Importar el sistema de rutas al siguiente archivo
+				src\app\app.module.ts
+				import { APP_ROUTING } from './app.routes';
+				
+			- Agregar lo importado en la parte de IMPORTS
+			
+		5. Decirle a ANGULAR donde queremos que renderice las paginas
+			src\app\app.component.html
+			
+			<div class="container">
+			  <router-outlet></router-outlet>
+			</div>
+				
+		- Cuando ya mandamos parametros y perdemos la referencia
+			src\app\app.routes.ts
+			export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { useHash:true });
+		
+			Más eficiente y soportado por una gran cantidad de navegadores web
+		
+		- Angular-CLI  de forma automatica, cuando no usamos la estructura de HASH
+			src\index.html
+			<base href="/">
+		
+		IMPORTANTE:
+			Vamos a dejarlo sin HASH, despues veremos donde es que falla sin ninguna configuracion previa en el servidor.
+		
+		
+		
+		
 			
