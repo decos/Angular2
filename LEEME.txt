@@ -650,8 +650,20 @@ ANGULARJS
 		3. Añadir la función "buscarHeroe" en el componente del "NAVBAR"
 		
 		
-		
-		
+	BUSCADOR DE HEROES
+		1. Crear un componente llamado Buscador
+			ng g c components/buscador 
+			
+		2. Agregar la siguiente ruta en el archivo de "rutas"
+			{ path: 'buscar/:termino', component: BuscadorComponent },
+			
+		3. Modificar la funcion "buscarHeroe"
+			src\app\components\shared\navbar\navbar.component.ts
+			
+		4. Codear el observador del componente "buscador"
+			src\app\components\buscador\buscador.component.ts
+			
+		5. Codear la vista del componente buscador
 		
 		
 		
