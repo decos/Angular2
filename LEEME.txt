@@ -574,10 +574,35 @@ ANGULARJS
 			- El resto es INTERPOLACION
 			
 			
+	RUTAS CON PARAMETROS Router y ActivatedRoute
+		- Dos tipos de Navegación:
+			
+			1. Utilizando un link
+				- Agregar la etiqueta <a> en
+					src\app\components\heroes\heroes.component.html
+				
+				- Crear un componente llama "Heroe"
+					ng g c components/heroe -is
+			
+				- Modificar el archivo de "rutas"
+					1. Importar el componente Heroe 
+					2. Agregar a la constante, "heroe/:id"
+		
+				- Añadir el "routerLink" a la etiqueta <a> en vez de "href"
+					src\app\components\heroes\heroes.component.html
+			
+			2. Utilizando un botón
+				- Añadir lo siguiente en la vista del componente "heroes"
+					(click) = "verHeroe(i)
+					
+				- Crear la función "verHeroe"
+					src\app\components\heroes\heroes.component.ts
+					
+				- Importar Router al componente "heroes"
+				
+				- Añadir un parametro router de tipo "Router" al constructor
+					
+					
 	
-			
-			
-			
-			
 		
 			
