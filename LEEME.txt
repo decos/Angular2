@@ -618,5 +618,32 @@ ANGULARJS
 			- Importat el servicio "HeroesService"
 			- Crear el objeto "heroe"
 			- Modificar el observador, para que el objeto "heroe" obtenga el heroe solicitado
+	
+		
+	PIPES: Transformacion de la data
+		- Los Pipes solo transforman la data en el template de forma visual.
+		- Ayudan a que la data se vea mejor.
+		
+		Ex:
+			currency
+			date
+			uppercase
+			json
+			limitTo
+			lowercase
+			async
+			decimal
+			percent
+		
+	
+	BUSCADOR DE HEROES
+		
+		
+		
+		
+		
+		
+		
+		
 		
 			
