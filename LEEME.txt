@@ -560,9 +560,21 @@ ANGULARJS
 		ngOnInit = Es bastante utilizado cuando la pagina ya esta renderizada
 			
 			
+	PAGINA DE HEROES - DISEÑO CON *ngFor
+		1.	Agregar la directiva *ngFor al div "CARD"
+			src\app\components\heroes\heroes.component.html
+			
+			- La imagen del objeto puede ser llamada de dos maneras:
+				src="{{ heroe.img }}" (INTERPOLACION)
+				[src]="heroe.img"
+			
+			- Elnombre del objeto ...
+				[alt]="heroe.nombre"
+			
+			- El resto es INTERPOLACION
 			
 			
-			
+	
 			
 			
 			
