@@ -665,7 +665,9 @@ ANGULARJS
 			
 		5. Codear la vista del componente buscador
 		
-		
+	
+	MOSTRANDO UN MENSAJE CUANDO NO HAY RESULTADOS
+		1. Agregamos logica a la vista del componente buscador
 		
 		
 		
