@@ -512,8 +512,24 @@ ANGULARJS
 			- Puedes pasarle una clase que tu especifiques, ex: active
 			- En el ejemplo de usa en la etiqueta <li> 
 		
-		
-		
+	
+	COMPONENTE HEROES DISEÑO
+		1. Agregar código HTML (Bootstrap4 Cards) al componente Heroes
+			src\app\components\heroes\heroes.component.html
+			
+		2. Cuando consumimos APIS deberiamos consumir SERVICIOS
+			
+		3. Añadir un nuevo estilo "body"	
+			src\styles.css
+			
+		4. Modificar el estilo del botón "buscar" del "NAVBAR"
+			src\app\components\shared\navbar\navbar.component.html
+			
+		5. Añadir el botón "Ver más..." al finalizar cada "CARD"
+			src\app\components\heroes\heroes.component.html
+			
+			
+			
 		
 		
 		
