@@ -529,7 +529,16 @@ ANGULARJS
 			src\app\components\heroes\heroes.component.html
 			
 			
+	INTRODUCCIÓN A LOS SERVICIOS
+		SERVICIOS:
+			- Brindar informacion a quien lo necesite
+			- Realizar peticiones CRUD
+			- Mantener la data de forma persistente
+			- Servir como recurso reutilizable para nuestra aplicacion
+			Ex:
+				HEROES: Manejar informacion relacionada con los HEROES 
 			
+	
 		
 		
 		
