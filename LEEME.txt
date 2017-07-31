@@ -487,6 +487,35 @@ ANGULARJS
 			Vamos a dejarlo sin HASH, despues veremos donde es que falla sin ninguna configuracion previa en el servidor.
 		
 		
+	RouterLink Y RouterLinkActive - COMPLETANDO LAS RUTAS
+		1. Completar las rutas que faltan en el archivo de rutas
+			ABOUT, HEROES
+			
+		2. Agregar los el nombre de los COMPONENTES al NAVBAR
+			src\app\components\shared\navbar\navbar.component.html
+			
+		RouterLink: 
+			- Elemento que recibe un arreglo como parametro.
+			- Cada posicion del arreglo es como si fuera un segmento del HTML
+			
+		3. Agregar los RouterLink al NAVBAR
+			src\app\components\shared\navbar\navbar.component.html
+			
+		4.- Agregar un estilo a la clase "main-container"
+			src\styles.css
+		
+		5. Agregar recurso Animación (rescursos: animate.css) a la siguiente carpeta:
+			src\styles.css
+			
+		RouterLinkActive
+			- No tiene relacion directa con RouterLink
+			- Puedes pasarle una clase que tu especifiques, ex: active
+			- En el ejemplo de usa en la etiqueta <li> 
+		
+		
+		
+		
+		
 		
 		
 			
