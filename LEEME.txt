@@ -539,8 +539,33 @@ ANGULARJS
 				HEROES: Manejar informacion relacionada con los HEROES 
 			
 	
+	CREANDO NUESTRO PRIMER SERVICIO - HeroesService
+		- El generador (CLI) tmb puede generar servicios
 		
+		-Sintaxis para crear servicio en Atom
+			ng2-service
+			
+		1. Crear la carpeta "servicios" dentro de la carpeta "app"
+		2. Crear el archivo "heroes.service.ts" dentro de la carpeta "servicios"
+			- Añadir una propiedad privada
+			- Añadir un constructor
+			- Añadir una funcion "getHeroes"
 		
+		3. Importar el servicio creado y añadirlo a "PROVIDERS"
+			src\app\app.module.ts
 		
+		4. Para utilizar el servicio en el componente HEROES
+			src\app\components\heroes\heroes.component.ts
+			
+		ngOnInit = Es bastante utilizado cuando la pagina ya esta renderizada
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		
 			
