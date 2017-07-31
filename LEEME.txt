@@ -636,7 +636,27 @@ ANGULARJS
 			percent
 		
 	
-	BUSCADOR DE HEROES
+	BUSCADOR DE HEROES 	
+		1. Obtener el valor de la caja de texto	
+			src\app\components\shared\navbar\navbar.component.html
+			Input
+				(keyup.enter)="buscarHeroe" #buscarTexto
+			Boton
+				(click)="buscarHeroe(buscarTexto.value)"
+			
+		2. Cambiar "form" por "div"
+			src\app\components\shared\navbar\navbar.component.html
+			
+		3. Añadir la función "buscarHeroe" en el componente del "NAVBAR"
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
