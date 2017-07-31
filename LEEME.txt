@@ -603,6 +603,20 @@ ANGULARJS
 				- Añadir un parametro router de tipo "Router" al constructor
 					
 					
-	
+	RECIBIENDO PARAMETROS POR URL - ActivatedRoute
+		1. Importar al componente "heroe" la clase "ActivatedRoute"
+		
+			- this.activateRoute.params.subscribe
+				Regresa un observador(una promesa)
+			
+		2. Modificar nuestro Servicio
+			src\app\servicios\heroes.service.ts
+			
+			- Agregar la funcion "getHeroe"
+			
+		3. Modificar el componente "heroe"
+			- Importat el servicio "HeroesService"
+			- Crear el objeto "heroe"
+			- Modificar el observador, para que el objeto "heroe" obtenga el heroe solicitado
 		
 			
